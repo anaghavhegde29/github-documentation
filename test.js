@@ -8,3 +8,4 @@ const numbers = [10, 20, 30, 40];
 console.log("Sum:", _.sum(numbers));
 
 console.log("Script executed successfully!");
+console.log("Workflow triggered after new commit!");
