@@ -6,6 +6,24 @@ on: [push]
 jobs:
   say-hello:
     runs-on: ubuntu-latest
+
     steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
       - name: Say Hello
         run: echo "Hello from GitHub Actions!"
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install Packages
+        run: npm install --no-save lodash
+
+      - name: Run Script
+        run: node test.js
+
+      - name: Deployment Demo
+        run: echo "Deployment step completed!"
